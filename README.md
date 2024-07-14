@@ -10,7 +10,7 @@
 
 
 
-### I exported the sample insomnia collection and put it in the folder. If you download Insomnia and import the relevant json, you can test endpoints through the collection ###
+### I exported the sample insomnia collection and put it in the folder. If you download Insomnia and import the relevant yaml, you can test endpoints through the collection ###
 
 Path ` /insomnia/mawileRequestCollection.yaml `
 
