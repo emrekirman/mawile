@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/mawile_db}
+    username: postgres
+    password: 98836
+  jpa:
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: true

@@ -1,0 +1,247 @@
+_type: export
+__export_format: 4
+__export_date: 2024-07-14T14:12:33.806Z
+__export_source: insomnia.desktop.app:v9.0.0
+resources:
+  - _id: req_357dda316f0c480ba9a31faf6dc37c90
+    parentId: fld_53f03e4f22534cd1827e894dff673516
+    modified: 1720919036684
+    created: 1720912057672
+    url: "{{ _.localUrl }}/api/v1/bank-accounts/by-account-number/1000003"
+    name: Get By Account Number
+    description: ""
+    method: GET
+    body: {}
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.0.0
+    authentication: {}
+    metaSortKey: -1717270853218.5
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_53f03e4f22534cd1827e894dff673516
+    parentId: wrk_be4dfe2fc52646ed98d6eec83e9112db
+    modified: 1720910752182
+    created: 1720910752182
+    name: BankAccount
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1720910752182
+    _type: request_group
+  - _id: wrk_be4dfe2fc52646ed98d6eec83e9112db
+    parentId: null
+    modified: 1720910728385
+    created: 1720910728385
+    name: Mawile Case Study
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_afe134de25e14b25958251a33bd2468b
+    parentId: fld_53f03e4f22534cd1827e894dff673516
+    modified: 1720913329427
+    created: 1720913315573
+    url: "{{ _.localUrl }}/api/v1/bank-accounts/debit"
+    name: Debit
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"accountNumber":"1000003",
+        	"amount":20.00
+        }
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.0.0
+    authentication: {}
+    metaSortKey: -1717877503537.25
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e3a42ff1959c4598a1de0849a8cf2778
+    parentId: fld_53f03e4f22534cd1827e894dff673516
+    modified: 1720963598322
+    created: 1720911547206
+    url: "{{ _.localUrl }}/api/v1/bank-accounts/credit"
+    name: Credit
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"accountNumber":"1000003",
+        	"amount":35.00
+        }
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.0.0
+    authentication: {}
+    metaSortKey: -1718484153856
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_7dbb360d6c804f15a89b87b97695f1ca
+    parentId: fld_53f03e4f22534cd1827e894dff673516
+    modified: 1720910835920
+    created: 1720910755131
+    url: "{{ _.localUrl }}/api/v1/bank-accounts"
+    name: Create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"owner":"Eee"
+        }
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.0.0
+    authentication: {}
+    metaSortKey: -1720910755131
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_0c7f78a86f11406f90ca33fc412049ce
+    parentId: fld_e0330e721f394cfc94400063cf9b502f
+    modified: 1720913412174
+    created: 1720912090963
+    url: "{{ _.localUrl }}/api/v1/transactions/by-bank-account-number/1000003"
+    name: Get By Bank Account Number
+    description: ""
+    method: GET
+    body: {}
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.0.0
+    authentication: {}
+    metaSortKey: -1720912090963
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_e0330e721f394cfc94400063cf9b502f
+    parentId: wrk_be4dfe2fc52646ed98d6eec83e9112db
+    modified: 1720912087898
+    created: 1720912087898
+    name: Transaction
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1720912087898
+    _type: request_group
+  - _id: req_e799ed97ffa5403fbfb3f848a19f88d4
+    parentId: fld_3155f59017a446c985075d8992166fe2
+    modified: 1720963741479
+    created: 1720918389168
+    url: "{{ _.localUrl }}/api/v1/phone-bills/bank-account/payment"
+    name: Bank Account Pay
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"phoneNumber":"1123123",
+        	"operator":"VODAFONE",
+        	"accountNumber":"1000003",
+        	"amount":30
+        }
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.0.0
+    authentication: {}
+    metaSortKey: -1720918389168
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_3155f59017a446c985075d8992166fe2
+    parentId: wrk_be4dfe2fc52646ed98d6eec83e9112db
+    modified: 1720918386569
+    created: 1720918386569
+    name: Phone Bill
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1720918386569
+    _type: request_group
+  - _id: env_ba644f62899d07f2481f9cd79896d2528c8b3690
+    parentId: wrk_be4dfe2fc52646ed98d6eec83e9112db
+    modified: 1720910780671
+    created: 1720910728387
+    name: Base Environment
+    data:
+      localUrl: http://localhost:8080
+    dataPropertyOrder:
+      "&":
+        - localUrl
+    color: null
+    isPrivate: false
+    metaSortKey: 1720910728387
+    _type: environment
+  - _id: jar_ba644f62899d07f2481f9cd79896d2528c8b3690
+    parentId: wrk_be4dfe2fc52646ed98d6eec83e9112db
+    modified: 1720910728389
+    created: 1720910728389
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
