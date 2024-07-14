@@ -1,7 +1,10 @@
 package com.emrekirman.mawile.common.service;
 
+import com.emrekirman.mawile.common.model.process.bill.BillRequest;
 import com.emrekirman.mawile.common.model.process.bill.BillResponse;
+import com.emrekirman.mawile.common.model.process.credit.CreditRequest;
 import com.emrekirman.mawile.common.model.process.credit.CreditResponse;
+import com.emrekirman.mawile.common.model.process.debit.DebitRequest;
 import com.emrekirman.mawile.common.model.process.debit.DebitResponse;
 
 /**
@@ -11,7 +14,7 @@ import com.emrekirman.mawile.common.model.process.debit.DebitResponse;
  * @param <D> Inheritance from Debit Request
  * @param <B> Inheritance from Bill Request
  */
-public interface IBankOperation<C, D, B> {
+public interface IBankOperation<C extends CreditRequest, D extends DebitRequest, B extends BillRequest> {
     CreditResponse credit(C creditRequest);
 
     DebitResponse debit(D debitRequest);
